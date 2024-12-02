@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="Facturas"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewFacturas"
+        android:layout_width="match_parent"
+        android:layout_height="617dp"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnAgregarFactura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agregar Factura"
+            android:layout_marginEnd="8dp"
+            android:background="@color/green"/>
+
+        <Button
+            android:id="@+id/btnActualizarFactura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar Factura"
+            android:visibility="gone"
+            android:layout_marginEnd="8dp"
+            android:background="@color/yellow"/>
+
+        <Button
+            android:id="@+id/btnEliminarFactura"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Factura"
+            android:visibility="gone"
+            android:background="@color/red"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtNoFacturas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No hay Facturas registrados"
+        android:visibility="gone"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_red_dark" />
+
+</LinearLayout>

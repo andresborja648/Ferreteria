@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:paddingBottom="8dp"
+        android:text="Productos"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="30sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewProductos"
+        android:layout_width="match_parent"
+        android:layout_height="613dp"
+        android:layout_marginTop="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btnAgregarProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:background="@color/green"
+            android:text="Agregar Producto"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btnActualizarProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Actualizar Producto"
+            android:visibility="gone"
+            android:layout_marginEnd="8dp"
+            android:background="@color/yellow"/>
+
+        <Button
+            android:id="@+id/btnEliminarProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eliminar Producto"
+            android:visibility="gone"
+            android:background="@color/red"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtNoProducto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No hay productos registrados"
+        android:visibility="gone"
+        android:gravity="center"
+        android:padding="16dp"
+        android:textSize="16sp"
+        android:textColor="@android:color/holo_red_dark" />
+
+</LinearLayout>
